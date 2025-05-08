@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-heartbeat"></i>
+            <span>Blood Bank</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#donate">Donate Blood</a></li>
+            <li><a href="#inventory">Blood Inventory</a></li>
+            <li><a href="#request">Request Blood</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Save Lives Through Blood Donation</h1>
+            <p>Your donation can save up to three lives!</p>
+            <div class="hero-buttons">
+                <a href="#donate" class="btn primary">Donate Now</a>
+                <a href="#request" class="btn secondary">Request Blood</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Why Donate Blood?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Save Lives</h3>
+                    <p>Your blood donation can help save multiple lives and contribute to someone's wellbeing.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-search"></i>
+                    <h3>Find Blood</h3>
+                    <p>Easily search and request blood of any group from our extensive network of donors.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Quick Process</h3>
+                    <p>Simple and quick registration process for both donors and recipients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blood Inventory Section -->
+    <section id="inventory" class="inventory">
+        <div class="container">
+            <h2>Current Blood Inventory Status</h2>
+            <div class="inventory-grid">
+                <div class="inventory-card available">
+                    <h3>A+</h3>
+                    <div class="units">15</div>
+                    <p>Available Units</p>
+                </div>
+                <div class="inventory-card available">
+                    <h3>B+</h3>
+                    <div class="units">20</div>
+                    <p>Available Units</p>
+                </div>
+                <div class="inventory-card low">
+                    <h3>O-</h3>
+                    <div class="units">8</div>
+                    <p>Available Units</p>
+                </div>
+                <div class="inventory-card critical">
+                    <h3>AB-</h3>
+                    <div class="units">2</div>
+                    <p>Available Units</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donor Registration Form -->
+    <section id="donate" class="donate">
+        <div class="container">
+            <h2>Blood Donor Registration</h2>
+            <form id="donorForm" class="form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" min="18" max="65" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bloodGroup">Blood Group</label>
+                        <select id="bloodGroup" required>
+                            <option value="">Select Blood Group</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <textarea id="address" required></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn primary">Register as Donor</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Request Blood Form -->
+    <section id="request" class="request">
+        <div class="container">
+            <h2>Request Blood</h2>
+            <form id="requestForm" class="form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="patientName">Patient Name</label>
+                        <input type="text" id="patientName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientAge">Patient Age</label>
+                        <input type="number" id="patientAge" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="requestBloodGroup">Blood Group Required</label>
+                        <select id="requestBloodGroup" required>
+                            <option value="">Select Blood Group</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="units">Units Required</label>
+                        <input type="number" id="units" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hospital">Hospital Name</label>
+                        <input type="text" id="hospital" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="doctor">Doctor Name</label>
+                        <input type="text" id="doctor" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactPerson">Contact Person</label>
+                        <input type="text" id="contactPerson" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactPhone">Contact Phone</label>
+                        <input type="tel" id="contactPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="urgency">Urgency Level</label>
+                        <select id="urgency" required>
+                            <option value="">Select Urgency</option>
+                            <option value="normal">Normal</option>
+                            <option value="urgent">Urgent</option>
+                            <option value="critical">Critical</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="reason">Reason for Request</label>
+                        <textarea id="reason" required></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn primary">Submit Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Our Blood Bank</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Mission</h3>
+                    <p>We are dedicated to saving lives by maintaining a safe and adequate blood supply for patients in need. Our mission is to connect generous donors with patients, ensuring that blood is available when and where it's needed most.</p>
+                    
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 24/7 Blood Availability</li>
+                        <li><i class="fas fa-check"></i> Easy Donation Process</li>
+                        <li><i class="fas fa-check"></i> Quick Response</li>
+                        <li><i class="fas fa-check"></i> Safety Standards</li>
+                        <li><i class="fas fa-check"></i> Community Support</li>
+                    </ul>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Medical Center Drive, Healthcare City</p>
+                    <p><i class="fas fa-phone"></i> Emergency Hotline: +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> Email: contact@bloodbank.org</p>
+                    <p><i class="fas fa-clock"></i> Operating Hours: 24/7 for emergencies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Blood Bank Management System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
